@@ -7,4 +7,8 @@ public interface IAccountService {
 
     ApiResponse<UserAccount> GetInformationAccount(String idUserAccount);
 
+    ApiResponse<String> CreateUserAccount(UserAccount userAccount);
+
+    ApiResponse<Boolean> DeleteUserAccount(String idUserAccount);
+
 }
