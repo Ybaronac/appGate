@@ -1,6 +1,7 @@
 package co.gov.icfes.appGate.Services.ADAzure;
 
 import co.gov.icfes.appGate.Services.ADAzure.Implement.IAccountService;
+import co.gov.icfes.appGate.dto.ADAzure.ChangePasswordAccount;
 import co.gov.icfes.appGate.dto.ADAzure.UserAccount;
 import co.gov.icfes.appGate.dto.ApiResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,15 +48,14 @@ public class AccountService implements IAccountService {
         return response;
     }
 
-
     @Override
-    public ApiResponse<String> CreateUserAccount(UserAccount userAccount) {
+    public ApiResponse<String> CreateUserAccount(UserAccount userAcount) {
         ApiResponse<String> response = new ApiResponse<String>();
         try{
             LOG.info("Solicitud de creación cuenta de usuario");
             RestTemplate restTemplate = new RestTemplate();
             String url = urlADAzure + "Account/CreateUserAccount";
-           // response = restTemplate.postForObject(url, ApiResponse.class);
+            response = restTemplate.postForObject(url,userAcount,ApiResponse.class);
 
             if(!response.getStatus()){
                 throw new Exception(response.getException());
@@ -78,9 +78,29 @@ public class AccountService implements IAccountService {
 
             RestTemplate restTemplate = new RestTemplate();
             String url = urlADAzure + "Account/DeleteUserAccount?idUserAccount="+idUserAccount;
+            ResponseEntity<ApiResponse> responseEntity  = restTemplate.exchange(url, HttpMethod.DELETE, new HttpEntity<String>(idUserAccount), ApiResponse.class);
+            response = responseEntity.getBody();
+            if(!response.getStatus()){
+                throw new Exception(response.getException());
+            }
 
-            ResponseEntity<Boolean> responseEntity = restTemplate.getForEntity(url, Boolean.class);
+        }catch (Exception ex){
+            LOG.info(SERVICE_EXECUTION_ERROR + AccountService.class.getName());
+            LOG.error(ex);
+            response.setException(ex.getMessage());
+        }
+        return response;
+    }
 
+    @Override
+    public ApiResponse<Boolean> ChangePassword(ChangePasswordAccount changePasswordAccount) {
+        ApiResponse<Boolean> response = new ApiResponse<Boolean>();
+        try{
+            LOG.info("Solicitud de cambio de contraseña de la cuenta de usuario " + changePasswordAccount.getCorreoElectronico());
+            RestTemplate restTemplate = new RestTemplate();
+            String url = urlADAzure + "Account/ChangePassword";
+            ResponseEntity<ApiResponse> responseEntity = restTemplate.exchange(url,HttpMethod.PUT,new HttpEntity<ChangePasswordAccount>(changePasswordAccount),ApiResponse.class);
+            response = responseEntity.getBody();
             if(!response.getStatus()){
                 throw new Exception(response.getException());
             }

@@ -1,6 +1,7 @@
 package co.gov.icfes.appGate.Controller;
 
 import co.gov.icfes.appGate.Services.ADAzure.Implement.IAccountService;
+import co.gov.icfes.appGate.dto.ADAzure.ChangePasswordAccount;
 import co.gov.icfes.appGate.dto.ADAzure.UserAccount;
 import co.gov.icfes.appGate.dto.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,4 +37,13 @@ public class AccountController {
     public ApiResponse<Boolean> DeleteUserAccount(@RequestParam String idUserAccount) {
         return accountService.DeleteUserAccount(idUserAccount);
     }
+
+    @RequestMapping(value = "/Account/ChangePassword",
+            method = RequestMethod.PUT,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ApiResponse<Boolean> ChangePassword(@RequestBody ChangePasswordAccount changePasswordAccount) {
+        return accountService.ChangePassword(changePasswordAccount);
+    }
+
+
 }
