@@ -1,5 +1,6 @@
 package co.gov.icfes.PasarelaAutenticador.Services.ADAzure;
 
+//region import
 import co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement.IAccountService;
 import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.ChangePasswordAccount;
 import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.UserAccount;
@@ -12,8 +13,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 import static co.gov.icfes.PasarelaAutenticador.Utils.Constants.Variables.*;
+//endregion import
+
 
 @Service
 public class AccountService implements IAccountService {

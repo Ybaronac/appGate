@@ -1,7 +1,9 @@
 package co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement;
 
+//region import
 import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.LoginUser;
 import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
+//endregion import
 
 public interface ISecurityService {
     /**

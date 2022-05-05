@@ -1,5 +1,6 @@
 package co.gov.icfes.PasarelaAutenticador.Services.ADAzure;
 
+//region import
 import co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement.ISecurityService;
 import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.LoginUser;
 import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
@@ -8,13 +9,9 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import static co.gov.icfes.PasarelaAutenticador.Utils.Constants.Variables.*;
+//endregion import
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
-import static co.gov.icfes.PasarelaAutenticador.Utils.Constants.Variables.SERVICE_EXECUTION_ERROR;
 
 @Service
 public class SecurityService implements ISecurityService {

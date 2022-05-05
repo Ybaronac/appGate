@@ -1,5 +1,6 @@
 package co.gov.icfes.PasarelaAutenticador.Controller;
 
+//region import
 import co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement.ISecurityService;
 import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.LoginUser;
 import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+//endregion import
 
 @SpringBootApplication
 @RestController()
