@@ -1,4 +1,4 @@
-package co.gov.icfes.appGate.swagger;
+package co.gov.icfes.PasarelaAutenticador.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(
-                        RequestHandlerSelectors.basePackage("co.gov.icfes.appGate.Controller"))
+                        RequestHandlerSelectors.basePackage("co.gov.icfes.PasarelaAutenticador.Controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -1,6 +1,6 @@
-package co.gov.icfes.appGate.dto;
+package co.gov.icfes.PasarelaAutenticador.dto;
 
-import static co.gov.icfes.appGate.Utils.Constants.Variables.*;
+import static co.gov.icfes.PasarelaAutenticador.Utils.Constants.Variables.*;
 
 public class ApiResponse<T> {
 

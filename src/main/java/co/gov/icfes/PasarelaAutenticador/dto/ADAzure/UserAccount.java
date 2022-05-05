@@ -1,7 +1,4 @@
-package co.gov.icfes.appGate.dto.ADAzure;
-
-import static co.gov.icfes.appGate.Utils.Constants.StringFormat.upperCaseFirst;
-import static co.gov.icfes.appGate.Utils.Constants.Variables.*;
+package co.gov.icfes.PasarelaAutenticador.dto.ADAzure;
 
 public class UserAccount {
 

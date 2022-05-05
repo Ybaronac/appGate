@@ -1,4 +1,4 @@
-package co.gov.icfes.appGate;
+package co.gov.icfes.PasarelaAutenticador;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

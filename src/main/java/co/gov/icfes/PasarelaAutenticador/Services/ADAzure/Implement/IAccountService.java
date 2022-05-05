@@ -1,8 +1,8 @@
-package co.gov.icfes.appGate.Services.ADAzure.Implement;
+package co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement;
 
-import co.gov.icfes.appGate.dto.ADAzure.ChangePasswordAccount;
-import co.gov.icfes.appGate.dto.ADAzure.UserAccount;
-import co.gov.icfes.appGate.dto.ApiResponse;
+import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.ChangePasswordAccount;
+import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.UserAccount;
+import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
 
 public interface IAccountService {
 

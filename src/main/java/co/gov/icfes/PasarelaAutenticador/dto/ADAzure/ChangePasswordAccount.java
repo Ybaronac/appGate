@@ -1,4 +1,4 @@
-package co.gov.icfes.appGate.dto.ADAzure;
+package co.gov.icfes.PasarelaAutenticador.dto.ADAzure;
 
 public class ChangePasswordAccount {
     /**

@@ -1,7 +1,7 @@
-package co.gov.icfes.appGate.Utils.Constants;
+package co.gov.icfes.PasarelaAutenticador.Utils.Constants;
 
 //region import
-import static co.gov.icfes.appGate.Utils.Constants.Variables.EMPTY_STRING;
+import static co.gov.icfes.PasarelaAutenticador.Utils.Constants.Variables.EMPTY_STRING;
 //endregion import
 
 /**

@@ -1,4 +1,4 @@
-package co.gov.icfes.appGate.Utils.Constants;
+package co.gov.icfes.PasarelaAutenticador.Utils.Constants;
 
 public class Variables {
 

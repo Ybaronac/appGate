@@ -1,4 +1,4 @@
-package co.gov.icfes.appGate;
+package co.gov.icfes.PasarelaAutenticador;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

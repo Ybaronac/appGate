@@ -1,9 +1,9 @@
-package co.gov.icfes.appGate.Controller;
+package co.gov.icfes.PasarelaAutenticador.Controller;
 
-import co.gov.icfes.appGate.Services.ADAzure.Implement.IAccountService;
-import co.gov.icfes.appGate.dto.ADAzure.ChangePasswordAccount;
-import co.gov.icfes.appGate.dto.ADAzure.UserAccount;
-import co.gov.icfes.appGate.dto.ApiResponse;
+import co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement.IAccountService;
+import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.ChangePasswordAccount;
+import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.UserAccount;
+import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.MediaType;

@@ -1,4 +1,4 @@
-package co.gov.icfes.appGate.Config;
+package co.gov.icfes.PasarelaAutenticador.Config;
 
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;

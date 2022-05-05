@@ -1,7 +1,7 @@
-package co.gov.icfes.appGate.Controller;
+package co.gov.icfes.PasarelaAutenticador.Controller;
 //region import
 
-import co.gov.icfes.appGate.dto.ApiResponse;
+import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
