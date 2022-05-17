@@ -2,6 +2,7 @@ package co.gov.icfes.PasarelaAutenticador.Services.ADAzure;
 
 //region import
 import co.gov.icfes.PasarelaAutenticador.Services.ADAzure.Implement.ISecurityService;
+import co.gov.icfes.PasarelaAutenticador.Utils.EncryptionAES;
 import co.gov.icfes.PasarelaAutenticador.dto.ADAzure.LoginUser;
 import co.gov.icfes.PasarelaAutenticador.dto.ApiResponse;
 import org.apache.logging.log4j.LogManager;
@@ -9,7 +10,12 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.io.Console;
+
 import static co.gov.icfes.PasarelaAutenticador.Utils.Constants.Variables.*;
+import static co.gov.icfes.PasarelaAutenticador.Utils.EncryptionAES.decrypt;
+import static co.gov.icfes.PasarelaAutenticador.Utils.EncryptionAES.encrypt;
 //endregion import
 
 
@@ -44,7 +50,12 @@ public class SecurityService implements ISecurityService {
 
     @Override
     public ApiResponse<String> GetTokenUsernamePassword(LoginUser loginUser) {
+        //TODO
         ApiResponse<String> response = new ApiResponse<String>();
+        System.out.println(loginUser.getPassword());
+        String encryptedPWD = encrypt(loginUser.getPassword());
+        System.out.println(encryptedPWD);
+        System.out.println(decrypt(encryptedPWD));
         try{
             LOG.info("Solicitud de Login de Usuario");
             RestTemplate restTemplate = new RestTemplate();
